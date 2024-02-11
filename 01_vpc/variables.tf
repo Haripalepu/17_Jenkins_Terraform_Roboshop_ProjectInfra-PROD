@@ -1,6 +1,6 @@
 
 variable "vpc_cidr" {
-    default = "10.10.0.0/16"
+    default = "172.16.0.0/16"
   }
 
 variable "common_tags" {
@@ -12,7 +12,9 @@ variable "common_tags" {
 }
 
 variable "vpc_tags" {
-  default = {}
+  default = {
+    
+  }
 }
 
 variable "project_name" {
@@ -24,17 +26,17 @@ variable "environment" {
 }
 
 variable "public_subnet_cidr" {
-  default = ["10.10.1.0/24", "10.10.2.0/24"]
+  default = ["172.16.1.0/24", "172.16.2.0/24"]
   
 }
 
 variable "private_subnet_cidr" {
-  default = ["10.10.3.0/24", "10.10.4.0/24"]
+  default = ["172.16.3.0/24", "172.16.4.0/24"]
   
 }
 
 variable "database_subnet_cidr" {
-  default = ["10.10.5.0/24", "10.10.6.0/24"]
+  default = ["172.16.5.0/24", "172.16.6.0/24"]
 }
 
 variable "is_peering_required" {
